@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All In Style</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <style>
+    .zoom { transition: transform 0.3s ease; }
+    .zoom:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+<!-- Produtos adicionados -->
+<section id="produtos" class="py-16 container mx-auto bg-black text-white">
+  <h3 class="text-3xl font-bold text-center mb-10 text-red-500">Coleção All In Style</h3>
+  <div class="swiper mySwiper relative">
+    <div class="swiper-wrapper">
+
+      <!-- Exemplo de produto -->
+      <div class="swiper-slide bg-[#1a1a1a] rounded-xl shadow-lg p-4">
+        <img src="img/moletom.jpg" alt="Moletom Bluff Master" class="w-full h-64 object-cover rounded zoom cursor-pointer" />
+        <h4 class="text-xl font-bold mt-4">Moletom Bluff Master</h4>
+        <p class="mt-2 text-gray-300">Estampa exclusiva inspirada nas maiores viradas do pôquer. Aqueça-se com estilo.</p>
+        <p class="mt-4 font-bold text-lg text-red-400">R$ 179,90</p>
+        <label class="block mt-2 text-sm">Tamanhos disponíveis:</label>
+        <select class="w-full bg-[#0a0a0a] border border-gray-600 text-white rounded p-2">
+          <option>P</option>
+          <option>M</option>
+          <option>G</option>
+          <option>GG</option>
+        </select>
+        <button class="mt-4 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded">Adicionar ao carrinho</button>
+      </div>
+
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination mt-6"></div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.mySwiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+</body>
+</html>
